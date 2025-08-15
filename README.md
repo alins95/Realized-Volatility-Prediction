@@ -21,5 +21,5 @@ We used a simple convex combination of the two models as our ensemble. The resul
 
 Ensemble_model = alpha * (NN_model) + (1-alpha) * (LGBM_model).
 
-We optimize the validation loss to find the best alpah. The NN_modl has 0.2377 validation loss, and the LGBM_model has 0.2393 loss while the Ensemble one has 0.2325 validation loss. The ensemble notebook can be found in [this](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/Ensemble.ipynb) link.
+We optimize the validation loss to find the best alpah. The NN_model has 0.2377 validation loss, and the LGBM_model has 0.2393 loss while the Ensemble one has 0.2325 validation loss. The ensemble notebook can be found in [this](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/Ensemble.ipynb) link.
  
