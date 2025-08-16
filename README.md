@@ -12,7 +12,7 @@ Using the engineered features and scipy.isomap, we try to reconstruct the order 
 
 ## 2)-Neural Network Model
 
-In the [Neural_NEt_Model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/Neural_Net_Model.ipynb), we train a NN model for predicting the volatilities. The NN architecture has eight hidden layers. The model has an embedding layer with(embedding dimension = 50) that keeps track of different stock_id's. In the forward method, we apply a sigmoid to the ouput of our network, since volatality is positive, and all the data points have volatality less than 1. There are no batch normalization or drop out layers, since the activation function in our model is SELU which gives us normalization effect during training. We use Lecun method to initialize our model; this leads to a faster training loop because of the SELU activation. 
+In the [Neural_Net_Model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/Neural_Net_Model.ipynb), we train a NN model for predicting the volatilities. The NN architecture has eight hidden layers. The model has an embedding layer with(embedding dimension = 50) that keeps track of different stock_id's. In the forward method, we apply a sigmoid to the ouput of our network, since volatality is positive, and all the data points have volatality less than 1. There are no batch normalization or drop out layers, since the activation function in our model is SELU which gives us normalization effect during training. We use Lecun method to initialize our model; this leads to a faster training loop because of the SELU activation. 
 
 ## 3)- LGBM Model
 
