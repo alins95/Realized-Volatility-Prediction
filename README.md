@@ -16,7 +16,7 @@ In the [neural_net_model notebook](https://github.com/alins95/Realized-Volatilit
 
 ## 3) LightGBM Model
 
-Next, in the [lgbm_model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/3_lgbm_model.ipynb), we train and optimize a boosted tree using optuna. Similar to the NN model, we use RMSPE loss function. 
+Next, in the [lgbm_model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/3_lgbm_model.ipynb), we optimiza and train a boosted tree using lightgbm and optuna. Similar to the NN model, we use RMSPE loss function.
 
 ## 4) Ensemble Model
 For the final prediction, in the [ensemble notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/4_ensemble.ipynb), we used a simple convex combination of the two models as our ensemble. The resulting model is defined as follows:
