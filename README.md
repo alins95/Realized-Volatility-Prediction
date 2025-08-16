@@ -12,14 +12,14 @@ Using the engineered features and scipy.isomap, we try to reconstruct the order 
 
 ## 2) Neural Network Model
 
-In the [Neural_Net_Model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/2_neural_net_model.ipynb), we train a NN model for predicting the volatilities. The NN architecture has eight hidden layers. The model has an embedding layer with(embedding dimension = 50) that keeps track of different stock_id's. In the forward method, we apply a sigmoid to the ouput of our network, since volatality is positive, and all the data points have volatality less than 1. There are no batch normalization or drop out layers, since the activation function in our model is SELU which gives us normalization effect during training. We use Lecun method to initialize our model; this leads to a faster training loop because of the SELU activation. 
+In the [neural_net_model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/2_neural_net_model.ipynb), we train a NN model for predicting the volatilities. The NN architecture has eight hidden layers. The model has an embedding layer with(embedding dimension = 50) that keeps track of different stock_id's. In the forward method, we apply a sigmoid to the ouput of our network, since volatality is positive, and all the data points have volatality less than 1. There are no batch normalization or drop out layers, since the activation function in our model is SELU which gives us normalization effect during training. We use Lecun method to initialize our model; this leads to a faster training loop because of the SELU activation. 
 
-## 3) LGBM Model
+## 3) LGB Model
 
-Next, in the [lgbm_model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/3_lgbm_model.ipynb), we train and optimize a boosted tree using optuna. Similar to the NN model, we use RMSPE loss function. 
+Next, in the [lgb_model notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/3_lgbm_model.ipynb), we train and optimize a boosted tree using optuna. Similar to the NN model, we use RMSPE loss function. 
 
 ## 4) Ensemble Model
-For the final prediction, in the [Ensemble notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/4_ensemble.ipynb), we used a simple convex combination of the two models as our ensemble. The resulting model is defined as follows:
+For the final prediction, in the [ensemble notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/4_ensemble.ipynb), we used a simple convex combination of the two models as our ensemble. The resulting model is defined as follows:
 
 Ensemble_model = alpha * (NN_model) + (1-alpha) * (LGBM_model).
 
