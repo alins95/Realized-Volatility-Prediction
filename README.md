@@ -3,7 +3,7 @@
 ## 1) Data Engineering
 
 ### 1.1) Constructing the Features
-We used the data from [this](https://www.kaggle.com/competitions/optiver-realized-volatility-prediction/data) Kaggle competition. 
+We used  data from [this](https://www.kaggle.com/competitions/optiver-realized-volatility-prediction/data) Kaggle competition. 
 
 In the [feature engineering notebook](https://github.com/alins95/Realized-Volatility-Prediction/blob/main/code/1.1_feature_engineering.ipynb), we first clean the data and generate our features based on the trade and order book data. We compute the features for the whole 10 minute window and the last 100,200, and 300 seconds of each window. The results are saved in df_train.csv.
 
